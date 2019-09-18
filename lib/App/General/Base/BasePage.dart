@@ -9,6 +9,8 @@ class BasePage extends StatefulWidget {
 class BasePageView extends State<BasePage> {
   bool isStatusBarShow = true; //状态栏是否显示
   bool isNavigationBarShow = true; //导航栏是否显示
+  bool isBackArrowShow = true; //返回箭头是否显示
+
   Color topBarColor = Colors.red;
   Color appBarColor = Colors.red;
   Color backArrowColor = Colors.white;
@@ -19,7 +21,7 @@ class BasePageView extends State<BasePage> {
 
   //标题字体大小
   double appBarCenterTextSize = 18; //根据需求变更
-  String appBarTitle = 'aa';
+  String appBarTitle = '标题';
 
   //小标题信息
   String appBarRightTitle;
@@ -62,7 +64,7 @@ class BasePageView extends State<BasePage> {
           ? new AppBar(
               centerTitle: true,
               title: Text(appBarTitle),
-              leading: getAppBarLeft(),
+              leading: isBackArrowShow ? getAppBarLeft() : null,
               backgroundColor: appBarContentColor,
             )
           : null,
