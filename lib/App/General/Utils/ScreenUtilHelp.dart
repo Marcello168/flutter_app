@@ -6,10 +6,10 @@ class ScreenUtilHelp {
   static double _screenHeight;
 
   static init(context) {
-    ScreenUtil.instance = ScreenUtil(width: 750, height: 1334)..init(context);
+    ScreenUtil.instance = ScreenUtil(width: 375, height: 667)..init(context);
     // this.screenWidth = ;
-    _screenWidth = ScreenUtil.screenWidth;
-    _screenHeight = ScreenUtil.screenHeight;
+    _screenWidth = ScreenUtil.screenWidthDp;
+    _screenHeight = ScreenUtil.screenHeightDp;
   }
 
   static get screenWidth {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/App/General/Base/BasePage.dart';
+import 'package:flutter_app/App/General/CustomWidget/EmptyPage/EmptyPage.dart';
 import 'package:flutter_easyrefresh/easy_refresh.dart';
 
 class DiscoverMainPage extends BasePage {
@@ -16,21 +17,13 @@ class DiscoverMainView extends BasePageView {
   ScrollController _scrollController;
 
   // 条目总数
-  int _count = 20;
-  // 反向
-  bool _reverse = false;
-  // 方向
-  Axis _direction = Axis.vertical;
-  // Header浮动
-  bool _headerFloat = false;
+  int _count = 0;
+
   // 无限加载
   bool _enableInfiniteLoad = true;
   // 控制结束
   bool _enableControlFinish = false;
-  // 任务独立
-  bool _taskIndependence = false;
-  // 震动
-  bool _vibration = true;
+
   // 是否开启刷新
   bool _enableRefresh = true;
   // 是否开启加载
@@ -58,6 +51,7 @@ class DiscoverMainView extends BasePageView {
       color: Colors.orange,
       child: Center(
         child: EasyRefresh.custom(
+          emptyWidget: _count == 0 ? EmptyPage() : null,
           enableControlFinishRefresh: true,
           enableControlFinishLoad: true,
           controller: _controller,

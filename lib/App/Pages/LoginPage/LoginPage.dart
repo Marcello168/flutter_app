@@ -23,6 +23,7 @@ class LoginPageView extends BasePageView {
         name: 'Marcello', token: 'lfsdkafklds', phone: '1511', avatar: 'ss');
     Global.saveUserInfo();
     Application.navigateToRoot(context: context, route: "${Routes.mainPage}");
+    // ApiManager.login();
   }
 
   @override

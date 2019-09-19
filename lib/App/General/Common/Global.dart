@@ -21,20 +21,17 @@ class Global {
 
   //初始化全局信息，会在APP启动时执行
   static Future init() async {
-    SharePreferTool tool = await SharePreferTool.getInstance();
-
+    await SharePreferTool.getInstance(); //等待初始化完成
+    // 初始化用户资料
     var mapUser = SharePreferTool.getObject("User");
-    print('读取用户信息-> ${mapUser}');
-
+    print('读取用户信息-> ${mapUser.toString()}');
     if (mapUser != null) {
       try {
         user = User.fromJson(mapUser);
       } catch (e) {
-        print('读取用户信息失败-> ${e}');
+        print('读取用户信息失败-> ${e.toString()}');
       }
     }
-    // 初始化用户资料
-
     //初始化网络请求相关配置
     // Git.init();
   }
@@ -46,7 +43,7 @@ class Global {
 
   ///移出用户资料
   static removeUserInfo() {
-    user = null;
     SharePreferTool.putObject("User", null);
+    user = null;
   }
 }

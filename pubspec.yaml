@@ -25,6 +25,9 @@ dependencies:
   flutter_easyrefresh: ^2.0.4
   flutter_swiper : ^1.1.5
   flutter_screenutil: ^0.5.3
+  dio: 3.0.0  #latest version
+  oktoast: ^2.2.0
+
 
 
 

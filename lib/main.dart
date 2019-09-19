@@ -4,6 +4,7 @@ import 'package:flutter_app/App/General/Router/routes.dart';
 import 'package:flutter_app/App/General/Utils/Application.dart';
 import './App/Pages/WelcomePage/WelcomePage.dart';
 import 'package:fluro/fluro.dart';
+import 'package:oktoast/oktoast.dart';
 
 void main() => Global.init().then((e) => runApp(App()));
 
@@ -25,14 +26,16 @@ class AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        platform: TargetPlatform.iOS,
-        primarySwatch: Colors.blue,
+    return OKToast(
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          platform: TargetPlatform.iOS,
+          primarySwatch: Colors.blue,
+        ),
+        home: WelcomePage(),
+        onGenerateRoute: Application.router.generator,
       ),
-      home: WelcomePage(),
-      onGenerateRoute: Application.router.generator,
     );
   }
 }
