@@ -2,11 +2,10 @@
  * @Author: gongyonghui
  * @Date: 2019-09-19 08:59:25
  * @LastEditors: gongyonghui
- * @LastEditTime: 2019-09-19 19:33:58
+ * @LastEditTime: 2019-09-20 14:57:03
  * @Description: file content
  */
 
-import 'package:flutter/widgets.dart';
 import './NetworkBaseService.dart';
 import './ResponseData.dart';
 
@@ -30,7 +29,6 @@ class NetApiManager extends NetworkBaseService {
 
   /// 获取天气的接口
   static const String _GET_WEATHER = "/";
-
   Future<ResponseData> getWeather() async {
     Map<String, dynamic> param = {};
 

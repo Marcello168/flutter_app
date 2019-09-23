@@ -2,7 +2,7 @@
  * @Author: gongyonghui
  * @Date: 2019-09-08 13:58:32
  * @LastEditors: gongyonghui
- * @LastEditTime: 2019-09-18 11:17:18
+ * @LastEditTime: 2019-09-20 09:37:14
  * @Description: file content
  */
 import 'package:fluro/fluro.dart';
@@ -13,10 +13,12 @@ class Routes {
   static String root = "/";
   static String loginPage = "/loginPage";
   static String mainPage = "/mainPage";
+  static String refreshPage = "/refreshPage";
 
   static void configureRoutes(Router router) {
     router.define(loginPage, handler: loginRouteHandler);
     router.define(mainPage, handler: mainRouteHandler);
+    router.define(refreshPage, handler: refreshPageRouteHandler);
 
     // router.define(root, handler: rootHandler);
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './MyNavigatorObserver.dart';
 
 class BasePage extends StatefulWidget {
   BasePage({Key key}) : super(key: key);
@@ -7,6 +8,8 @@ class BasePage extends StatefulWidget {
 }
 
 class BasePageView extends State<BasePage> {
+  MyNavigatorObserver myObserver = MyNavigatorObserver();
+
   bool isStatusBarShow = true; //状态栏是否显示
   bool isNavigationBarShow = true; //导航栏是否显示
   bool isBackArrowShow = true; //返回箭头是否显示
@@ -26,6 +29,20 @@ class BasePageView extends State<BasePage> {
   //小标题信息
   String appBarRightTitle;
   double appBarRightTextSize = 15.0;
+
+  @override
+  void initState() {
+    super.initState();
+    //建议在initState时动态添加Observer，而不是build时，避免重复添加
+    // Navigator.of(context).widget.observers.add(myObserver);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    //dispose时记得移除监听
+    // Navigator.of(context).widget.observers.remove(myObserver);
+  }
 
   Widget renderView() {
     return Container(
@@ -54,6 +71,7 @@ class BasePageView extends State<BasePage> {
 
   void didClickAppBarBack() {
     print('后退返回');
+    Navigator.pop(context);
   }
 
   @override

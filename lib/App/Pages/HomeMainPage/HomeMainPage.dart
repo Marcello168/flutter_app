@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/App/General/Base/BasePage.dart';
 import 'package:flutter_app/App/General/Network/NetApiManager.dart';
 import 'package:flutter_app/App/General/Network/ResponseData.dart';
+import 'package:flutter_app/App/General/Router/routes.dart';
+import 'package:flutter_app/App/General/Utils/Application.dart';
 import 'package:flutter_app/App/General/Utils/ScreenUtilHelp.dart';
 import 'package:flutter_app/App/General/Utils/ToastHelper.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
@@ -46,6 +48,11 @@ class HomeMainView extends BasePageView {
     print("Data-> ${data.toString()}");
   }
 
+  _didClickRefreshPage() {
+    Application.navigateToRoot(
+        context: context, route: "${Routes.refreshPage}");
+  }
+
   @override
   Widget renderView() {
     // TODO: implement renderView
@@ -74,8 +81,8 @@ class HomeMainView extends BasePageView {
             ),
           ),
           RaisedButton(
-            child: Text('文字toast'),
-            onPressed: _showToast,
+            child: Text('上下拉刷新1'),
+            onPressed: _didClickRefreshPage,
           ),
           RaisedButton(
             child: Text('自定义Widget Toast'),

@@ -19,16 +19,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fluro: ^1.4.0
-  shared_preferences: ^0.5.2
-  synchronized: '>=1.5.1 <3.0.0'
-  flutter_easyrefresh: ^2.0.4
-  flutter_swiper : ^1.1.5
-  flutter_screenutil: ^0.5.3
+  fluro: ^1.4.0 #路由导航
+  shared_preferences: ^0.5.2 #偏好设置
+  synchronized: '>=1.5.1 <3.0.0' #同步锁
+  flutter_easyrefresh: ^2.0.4 #上下拉刷新工具
+  flutter_swiper: ^1.1.5 #轮播图公工具
+  flutter_screenutil: ^0.5.3 #屏幕适配工具
   dio: 3.0.0  #latest version
-  oktoast: ^2.2.0
-
-
+  oktoast: ^2.2.0 #Toast
+  cached_network_image: ^1.1.1 #缓存网络照片
+  json_serializable: ^3.0.0
+  build_runner: ^1.6.1
+  provider: 3.0.0+1 #数据管理层
 
 
   # The following adds the Cupertino Icons font to your application.

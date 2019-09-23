@@ -10,6 +10,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/App/Pages/LoginPage/LoginPage.dart';
 import 'package:flutter_app/App/Pages/MainPage/MainPage.dart';
+import 'package:flutter_app/App/Pages/TestPage/RefreshPage.dart';
 
 // var rootHandler = Handler(
 //     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -19,6 +20,12 @@ import 'package:flutter_app/App/Pages/MainPage/MainPage.dart';
 var loginRouteHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return LoginPage();
+});
+
+/// 刷新页面
+var refreshPageRouteHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return RefreshPage();
 });
 
 var mainRouteHandler = Handler(

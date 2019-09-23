@@ -2,7 +2,7 @@
  * @Author: gongyonghui
  * @Date: 2019-09-19 20:11:29
  * @LastEditors: gongyonghui
- * @LastEditTime: 2019-09-19 20:19:37
+ * @LastEditTime: 2019-09-20 09:06:01
  * @Description: file content
  */
 
@@ -44,6 +44,7 @@ class RefreshListViewState extends State<RefreshListView> {
     super.initState();
   }
 
+  ///
   getListViewContainer() {
     return Container();
   }
