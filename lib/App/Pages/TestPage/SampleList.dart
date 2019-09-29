@@ -6,7 +6,6 @@
  * @Description: file content
  */
 import 'package:flutter/material.dart';
-
 /// 简单列表项
 class SampleListItem extends StatelessWidget {
   /// 方向

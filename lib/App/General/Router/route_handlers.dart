@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/App/Pages/LoginPage/LoginPage.dart';
 import 'package:flutter_app/App/Pages/MainPage/MainPage.dart';
 import 'package:flutter_app/App/Pages/TestPage/RefreshPage.dart';
+import 'package:flutter_app/App/Pages/TestPage/TabbarPage.dart';
 
 // var rootHandler = Handler(
 //     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -26,6 +27,12 @@ var loginRouteHandler = Handler(
 var refreshPageRouteHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   return RefreshPage();
+});
+
+/// 刷新页面
+var tabbarPageRouteHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return TabbarPage();
 });
 
 var mainRouteHandler = Handler(

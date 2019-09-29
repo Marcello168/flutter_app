@@ -5,6 +5,7 @@ import 'package:flutter_app/App/General/Router/routes.dart';
 import 'dart:async';
 
 import 'package:flutter_app/App/General/Utils/Application.dart';
+import 'package:flutter_app/App/General/Utils/LoggerUtil.dart';
 import 'package:flutter_app/App/General/Utils/ScreenUtilHelp.dart';
 
 class WelcomePage extends BasePage {
@@ -19,7 +20,6 @@ class WelcomePageView extends BasePageView {
   @override
   void initState() {
     print('ABCssDDD');
-
     // TODO: implement initState
     super.initState();
     //启动页 跳转到

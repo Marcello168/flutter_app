@@ -14,11 +14,13 @@ class Routes {
   static String loginPage = "/loginPage";
   static String mainPage = "/mainPage";
   static String refreshPage = "/refreshPage";
+  static String tabbarPage = "/tabbarPage";
 
   static void configureRoutes(Router router) {
     router.define(loginPage, handler: loginRouteHandler);
     router.define(mainPage, handler: mainRouteHandler);
     router.define(refreshPage, handler: refreshPageRouteHandler);
+    router.define(tabbarPage, handler: tabbarPageRouteHandler);
 
     // router.define(root, handler: rootHandler);
 

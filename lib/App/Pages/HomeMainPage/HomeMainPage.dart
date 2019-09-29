@@ -4,6 +4,7 @@ import 'package:flutter_app/App/General/Network/NetApiManager.dart';
 import 'package:flutter_app/App/General/Network/ResponseData.dart';
 import 'package:flutter_app/App/General/Router/routes.dart';
 import 'package:flutter_app/App/General/Utils/Application.dart';
+import 'package:flutter_app/App/General/Utils/LoggerUtil.dart';
 import 'package:flutter_app/App/General/Utils/ScreenUtilHelp.dart';
 import 'package:flutter_app/App/General/Utils/ToastHelper.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
@@ -48,9 +49,16 @@ class HomeMainView extends BasePageView {
     print("Data-> ${data.toString()}");
   }
 
+  _onClickTabbarButton() {
+    Application.navigateTo(context: context, route: "${Routes.tabbarPage}");
+  }
+
   _didClickRefreshPage() {
-    Application.navigateToRoot(
-        context: context, route: "${Routes.refreshPage}");
+    print('111111111111111');
+    LoggerUtil.d('ddddddd');
+    LoggerUtil.wtf('wtf');
+    LoggerUtil.e('eeeeee');
+    Application.navigateTo(context: context, route: "${Routes.refreshPage}");
   }
 
   @override
@@ -91,6 +99,10 @@ class HomeMainView extends BasePageView {
           RaisedButton(
             child: Text('ToastHelper '),
             onPressed: _getbanaData,
+          ),
+          RaisedButton(
+            child: Text('TabbarView '),
+            onPressed: _onClickTabbarButton,
           )
         ],
       ),
